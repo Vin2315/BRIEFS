@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Prueba correo</title>
+		<script src="https://www.google.com/recaptcha/api.js"></script>
+	</head>
+
+	<body>
+		<from id="forme" action="mail.php" method="post" >                                   <!--se puede poner novalideit-->
+            <input type='email' name="mail" placeholder="Replir cet email" value="<?php echo htmlspecialchars($_GET['test'])?>">  <!-- no podran ingresar cualquier cosa en el programa htmlspecialchars($_GET['test'])-->
+            <input type='submit' value="Send">
+		
+		
+			<button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+
+        </from>
+
+       
+        
+        </label>
+			<input type="email" name="mail" placeholder="Votre E-mail SVP" />
+			<input type="submit" value="Send" />
+
+			
+		</div>
+
+		<h1>Sur mon parcour</h1>
+	</body>
+
+
+	<script>
+   function onSubmit(token) {
+     document.getElementById("forme").submit();
+   }
+
+</script>
+
+</html>
+
+<!--  -->
